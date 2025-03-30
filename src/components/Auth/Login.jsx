@@ -1,12 +1,15 @@
 import React from 'react';
 import { useState } from 'react';
 
-const Login = () => {
+const Login = ({handleLogin}) => {
+console.log(handleLogin)
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     
     const submitHandler = (e) => {
         e.preventDefault();
+        handleLogin(email, password);
         console.log("Email is", email);
         console.log("Password is", password);
 
@@ -21,7 +24,7 @@ const Login = () => {
                 <img
                     src="https://i.pinimg.com/736x/00/ab/38/00ab38b9af71e36ea7f3fc43225e40bf.jpg" 
                     alt="Astronaut relaxing" 
-                    className="h-86 w-full object-cover ml-72"
+                    className="h-auto max-w-screen object-cover ml-72"
                 />
             </div>
             {/* Form Section */}
