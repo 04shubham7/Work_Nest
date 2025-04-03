@@ -9,7 +9,7 @@ const Login = ({handleLogin}) => {
     
     const submitHandler = (e) => {
         e.preventDefault();
-        handleLogin(email, password);
+        handleLogin(email,password);
         // Clear the input fields after submission
 
         setEmail('');
