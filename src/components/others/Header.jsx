@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Header = () => {
+const Header = (props) => {
 
   
   // const [username, setUsername] = useState(' ')
@@ -12,6 +12,7 @@ const Header = () => {
 const logOutuser = () => {
 localStorage.setItem('loggedInUser', ' ')
 window.location.reload()
+
 }
 
   return (
